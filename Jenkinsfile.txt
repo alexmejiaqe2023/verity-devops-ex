@@ -3,9 +3,8 @@ pipeline {
     stages {
 		
 		
-		// ******ALL CODE TO BE ADDED BELOW THIS COMMENT*******
-		
-			//Code starts for stage Clean
+		// ******ALL CODE TO BE ADDED BELOW THIS COMMENT******
+		//Code starts for stage Clean
         stage('Clean') {
             steps {
                 sh 'mvn clean'
@@ -21,15 +20,15 @@ pipeline {
             }
         }
 		//Code ends for stage PMD
-		
-		
-		//Code starts for stage Compile
+
+    //Code starts for stage Compile
 		stage('Compile') {
             steps {
                 sh 'mvn compile'
             }
         }
 		//Code ends for stage Compile
+	
 	
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
     }
