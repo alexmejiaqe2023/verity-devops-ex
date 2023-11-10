@@ -7,7 +7,7 @@ pipeline {
         //Code starts for stage Clean
         stage('Clean') {
             steps {
-                sh 'mvn clean package sonar:sonar'
+                sh 'mvn clean'
             }
         }
         //Code ends for stage Clean
