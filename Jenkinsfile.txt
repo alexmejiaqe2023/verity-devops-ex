@@ -50,7 +50,7 @@ pipeline {
                 }
             withSonarQubeEnv('My SonarQube Server')
                 {
-                sh 'mvn clean package sonar:sonar'
+                sh 'mvn clean package'
                 echo 'Static Analysis Completed'
                 sh "${scannerHome}/bin/sonar-scanner"
                 }
