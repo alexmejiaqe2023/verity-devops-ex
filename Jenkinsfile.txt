@@ -70,8 +70,8 @@ pipeline {
 
         //Code starts for stage Install
         stage('Install') {
-                    steps {
-                        sh 'mvn install -DskipTests'
+            steps {
+                        sh 'mvn install package -DskipTests'
                     }
         }
         //Code ends for stage Install
