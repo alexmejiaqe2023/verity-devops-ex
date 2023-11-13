@@ -78,9 +78,9 @@ pipeline {
 
         //Code starts for stage Launch Tomcat Server
         stage('Launch Tomcat Server') {
-                    steps {
-                        sh '/tmp/apache-tomcat-9.0.20/bin/startup.sh'
-                    }
+            steps {
+               sh '/tmp/apache-tomcat-9.0.82/bin/startup.sh'
+            }
         }
         //Code ends for stage Launch Tomcat Server
 
