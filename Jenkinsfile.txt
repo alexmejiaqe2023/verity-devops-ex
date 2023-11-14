@@ -30,16 +30,16 @@ pipeline {
         //Code ends for stage Compile
 
         //Code starts for stage Unit Test
-        //stage('Unit Test') {
-        //    steps {
-        //        sh 'mvn test'
-        //    }
-            //post {
-            //    always {
-            //        junit 'target/surefire-reports/*.xml'
-            //    }
-            //}
-        //}
+        stage('Unit Test') {
+            steps {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
         //Code ends for stage Unit Test
 
         //Code starts for stage Code Analysis
@@ -93,17 +93,17 @@ pipeline {
 
         //Code ends for stage Launch Tomcat Server
 
-                //Code starts for stage API Test
+        //Code starts for stage API Test
                 //stage('API Test') {
                 //    steps {
                         //Change git url below as per your forked github repository URL
                 //        git url: 'https://github.com/alexmejiaqe2023/EMAPITests-ex.git'
                 //       sh 'mvn -Dtest=ExpenseManagerAPITest test'
                 //    }
-                //}
-                //Code ends for stage API Test
+              //}
+        //Code ends for stage API Test
 
-                        //Code starts for stage System Test
+        //Code starts for stage System Test
                         stage('System Test') {
                             steps {
                                 //Change git url below as per your forked github repository URL
@@ -111,7 +111,7 @@ pipeline {
                                 sh 'mvn -Dtest=ExpenseManagerSystemTest test'
                             }
                         }
-                        //Code ends for stage System Test
+        //Code ends for stage System Test
 
         // ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
     }
